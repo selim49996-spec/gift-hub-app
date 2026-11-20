@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#6d45d8">
+<title>Gift Hub — উপহারের সুন্দর ঠিকানা</title>
+<style>
+:root{--purple:#6d45d8;--deep:#392078;--pink:#ff6f9f;--ink:#211b35;--muted:#777287;--bg:#f7f5fc;--card:#fff;--line:#eeeaf6}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Noto Sans Bengali",sans-serif}
+header{background:linear-gradient(135deg,#6d45d8,#9c69ed);color:white;padding:25px 18px 30px;border-radius:0 0 28px 28px}
+.top{display:flex;align-items:center;justify-content:space-between;max-width:900px;margin:auto}.brand{font-weight:800;font-size:21px;letter-spacing:.2px}.brand span{color:#ffe18c}.pill{border:1px solid #ffffff66;background:#ffffff20;border-radius:30px;padding:7px 12px;font-size:12px}
+.hero{max-width:900px;margin:25px auto 0}.hero h1{font-size:29px;line-height:1.35;margin:0 0 8px}.hero p{margin:0;color:#eee7ff;font-size:14px}
+.searchwrap{max-width:900px;margin:-20px auto 0;padding:0 16px;position:relative}.search{width:100%;border:0;border-radius:16px;padding:16px 17px;font-size:15px;box-shadow:0 8px 24px #39207818;outline:none}
+main{max-width:900px;margin:24px auto;padding:0 16px 40px}.sectionhead{display:flex;align-items:center;justify-content:space-between;margin:24px 0 13px}.sectionhead h2{font-size:18px;margin:0}.muted{font-size:12px;color:var(--muted)}
+.categories{display:flex;gap:9px;overflow:auto;padding:2px 0 8px}.chip{white-space:nowrap;border:1px solid var(--line);background:white;border-radius:30px;padding:9px 14px;color:#554d68;font-size:13px}.chip.active{background:var(--deep);color:white;border-color:var(--deep)}
+.feature{background:linear-gradient(120deg,#fff0f5,#f1eaff);border:1px solid #f0e4fb;border-radius:20px;padding:17px;display:flex;align-items:center;gap:12px}.feature .emoji{font-size:43px}.feature h3{margin:0 0 4px;font-size:16px}.feature p{margin:0;color:#746b83;font-size:12px}.btn{border:0;background:var(--purple);color:white;border-radius:12px;padding:11px 15px;font-weight:700;font-size:13px;cursor:pointer}.feature .btn{margin-left:auto;white-space:nowrap}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.gift{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px;min-height:158px;box-shadow:0 4px 14px #30205208}.gift .art{font-size:35px;background:#f7f3ff;width:58px;height:58px;display:grid;place-items:center;border-radius:16px;margin-bottom:10px}.gift h3{font-size:14px;margin:0 0 5px}.gift p{font-size:12px;color:var(--muted);margin:0 0 10px}.giftbottom{display:flex;align-items:center;justify-content:space-between}.tag{font-size:11px;color:var(--purple);background:#f1ebff;border-radius:20px;padding:5px 8px}.heart{border:0;background:transparent;font-size:20px;color:#a29bad;cursor:pointer}.heart.saved{color:#f05283}
+.adbox{margin:22px 0;background:#fff;border:1px dashed #cfc5e5;border-radius:15px;padding:14px;text-align:center;color:#928aa2;font-size:12px}.adbox strong{display:block;color:#6f6680;font-size:11px;margin-bottom:4px}
+.empty{display:none;text-align:center;color:var(--muted);padding:25px}.footer{text-align:center;color:#918a9e;font-size:11px;padding:18px}
+@media(min-width:650px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hero h1{font-size:36px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="top"><div class="brand">🎁 Gift <span>Hub</span></div><div class="pill">উপহারের সুন্দর ঠিকানা</div></div>
+  <div class="hero"><h1>প্রিয়জনের জন্য খুঁজে নিন<br>মনের মতো উপহার</h1><p>জন্মদিন, বিবাহবার্ষিকী কিংবা বিশেষ দিন—উপহারের আইডিয়া এখন এক জায়গায়।</p></div>
+</header>
+<div class="searchwrap"><input id="search" class="search" type="search" placeholder="🔎 উপহার খুঁজুন… যেমন জন্মদিন, বই, ফুল"></div>
+<main>
+  <div class="sectionhead"><h2>ক্যাটাগরি</h2><span class="muted">আপনার পছন্দ বেছে নিন</span></div>
+  <div class="categories" id="categories">
+    <button class="chip active" data-cat="সব">সব</button><button class="chip" data-cat="জন্মদিন">🎂 জন্মদিন</button><button class="chip" data-cat="ভালোবাসা">💝 ভালোবাসা</button><button class="chip" data-cat="পরিবার">👨‍👩‍👧 পরিবার</button><button class="chip" data-cat="বন্ধু">🫶 বন্ধু</button><button class="chip" data-cat="কম বাজেট">💰 কম বাজেট</button>
+  </div>
+  <div class="sectionhead"><h2>আজকের বিশেষ আইডিয়া</h2></div>
+  <div class="feature"><div class="emoji">🌷</div><div><h3>ছোট্ট চমক, বড় আনন্দ</h3><p>একগুচ্ছ ফুলের সঙ্গে নিজের হাতে লেখা একটি চিঠি।</p></div><button class="btn" id="surprise">আরও আইডিয়া</button></div>
+  <div class="sectionhead"><h2>জনপ্রিয় উপহারের আইডিয়া</h2><span class="muted" id="count"></span></div>
+  <div class="grid" id="grid"></div>
+  <div class="empty" id="empty">এই খোঁজে কোনো আইডিয়া পাওয়া যায়নি। অন্য শব্দ লিখে দেখুন।</div>
+  <div class="adbox"><strong>বিজ্ঞাপনের জায়গা</strong>অ্যাপ প্রকাশ ও বিজ্ঞাপন নেটওয়ার্কের অনুমোদনের পরে এখানে বিজ্ঞাপন দেখানো যাবে।</div>
+  <div class="sectionhead"><h2>আপনার পছন্দের তালিকা</h2><span class="muted">♡ সেভ করা আইডিয়া</span></div>
+  <div id="saved" class="muted">এখনও কোনো উপহার সেভ করা হয়নি।</div>
+  <div class="footer">Gift Hub © 2026 · ভালোবাসা দিয়ে তৈরি</div>
+</main>
+<script>
+const items=[
+ {id:1,e:'🎧',n:'ওয়্যারলেস ইয়ারবাড',d:'গান শুনতে ভালোবাসেন এমন কারও জন্য',c:'জন্মদিন',t:'টেক'},
+ {id:2,e:'📚',n:'প্রিয় বই',d:'বইপ্রেমী মানুষকে আনন্দ দেওয়ার সহজ উপায়',c:'বন্ধু',t:'ভাবনাপূর্ণ'},
+ {id:3,e:'🌹',n:'ফুলের তোড়া',d:'বিশেষ দিনে মনের কথা জানান',c:'ভালোবাসা',t:'রোমান্টিক'},
+ {id:4,e:'☕',n:'কাস্টম মগ',d:'নাম বা ছবি দিয়ে ব্যক্তিগত উপহার',c:'পরিবার',t:'ব্যক্তিগত'},
+ {id:5,e:'🪴',n:'ছোট ইনডোর গাছ',d:'ঘর সাজাতে ভালোবাসেন এমন কারও জন্য',c:'কম বাজেট',t:'প্রকৃতি'},
+ {id:6,e:'🖼️',n:'ছবির ফ্রেম',d:'একসঙ্গে কাটানো স্মৃতি ধরে রাখুন',c:'পরিবার',t:'স্মৃতি'},
+ {id:7,e:'⌚',n:'হাতঘড়ি',d:'প্রতিদিন ব্যবহার করা যায় এমন উপহার',c:'জন্মদিন',t:'স্টাইল'},
+ {id:8,e:'🍫',n:'চকলেট বক্স',d:'ছোট্ট আনন্দের মিষ্টি চমক',c:'কম বাজেট',t:'মিষ্টি'},
+ {id:9,e:'🧸',n:'নরম টেডি',d:'প্রিয়জনের জন্য মিষ্টি স্মারক',c:'ভালোবাসা',t:'কিউট'},
+ {id:10,e:'🖊️',n:'সুন্দর কলম',d:'পড়াশোনা বা কাজের জন্য উপযোগী',c:'বন্ধু',t:'ব্যবহারিক'}
+];
+let active='সব',saved=JSON.parse(localStorage.getItem('gh_saved')||'[]');
+function render(){
+ const q=document.getElementById('search').value.trim().toLowerCase();
+ const filtered=items.filter(x=>(active==='সব'||x.c===active)&&(x.n+' '+x.d+' '+x.c+' '+x.t).toLowerCase().includes(q));
+ document.getElementById('grid').innerHTML=filtered.map(x=>`<article class="gift"><div class="art">${x.e}</div><h3>${x.n}</h3><p>${x.d}</p><div class="giftbottom"><span class="tag">${x.c}</span><button class="heart ${saved.includes(x.id)?'saved':''}" aria-label="পছন্দে রাখুন" onclick="toggleSave(${x.id})">${saved.includes(x.id)?'♥':'♡'}</button></div></article>`).join('');
+ document.getElementById('count').textContent=filtered.length+'টি আইডিয়া';
+ document.getElementById('empty').style.display=filtered.length?'none':'block';
+ document.getElementById('saved').textContent=saved.length?items.filter(x=>saved.includes(x.id)).map(x=>x.e+' '+x.n).join('  ·  '):'এখনও কোনো উপহার সেভ করা হয়নি।';
+}
+function toggleSave(id){saved=saved.includes(id)?saved.filter(x=>x!==id):[...saved,id];localStorage.setItem('gh_saved',JSON.stringify(saved));render()}
+document.getElementById('search').addEventListener('input',render);
+document.getElementById('categories').addEventListener('click',e=>{if(e.target.matches('button[data-cat]')){active=e.target.dataset.cat;document.querySelectorAll('.chip').forEach(b=>b.classList.toggle('active',b===e.target));render()}});
+document.getElementById('surprise').addEventListener('click',()=>{const x=items[Math.floor(Math.random()*items.length)];alert('🎁 '+x.n+'\\n'+x.d)});
+render();
+</script>
+</body>
+</html>
