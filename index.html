@@ -1,73 +1,179 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="bn">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#6d45d8">
-<title>Gift Hub — উপহারের সুন্দর ঠিকানা</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#7138d8">
+<title>Gift Hub – মনের মতো উপহার</title>
 <style>
-:root{--purple:#6d45d8;--deep:#392078;--pink:#ff6f9f;--ink:#211b35;--muted:#777287;--bg:#f7f5fc;--card:#fff;--line:#eeeaf6}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Noto Sans Bengali",sans-serif}
-header{background:linear-gradient(135deg,#6d45d8,#9c69ed);color:white;padding:25px 18px 30px;border-radius:0 0 28px 28px}
-.top{display:flex;align-items:center;justify-content:space-between;max-width:900px;margin:auto}.brand{font-weight:800;font-size:21px;letter-spacing:.2px}.brand span{color:#ffe18c}.pill{border:1px solid #ffffff66;background:#ffffff20;border-radius:30px;padding:7px 12px;font-size:12px}
-.hero{max-width:900px;margin:25px auto 0}.hero h1{font-size:29px;line-height:1.35;margin:0 0 8px}.hero p{margin:0;color:#eee7ff;font-size:14px}
-.searchwrap{max-width:900px;margin:-20px auto 0;padding:0 16px;position:relative}.search{width:100%;border:0;border-radius:16px;padding:16px 17px;font-size:15px;box-shadow:0 8px 24px #39207818;outline:none}
-main{max-width:900px;margin:24px auto;padding:0 16px 40px}.sectionhead{display:flex;align-items:center;justify-content:space-between;margin:24px 0 13px}.sectionhead h2{font-size:18px;margin:0}.muted{font-size:12px;color:var(--muted)}
-.categories{display:flex;gap:9px;overflow:auto;padding:2px 0 8px}.chip{white-space:nowrap;border:1px solid var(--line);background:white;border-radius:30px;padding:9px 14px;color:#554d68;font-size:13px}.chip.active{background:var(--deep);color:white;border-color:var(--deep)}
-.feature{background:linear-gradient(120deg,#fff0f5,#f1eaff);border:1px solid #f0e4fb;border-radius:20px;padding:17px;display:flex;align-items:center;gap:12px}.feature .emoji{font-size:43px}.feature h3{margin:0 0 4px;font-size:16px}.feature p{margin:0;color:#746b83;font-size:12px}.btn{border:0;background:var(--purple);color:white;border-radius:12px;padding:11px 15px;font-weight:700;font-size:13px;cursor:pointer}.feature .btn{margin-left:auto;white-space:nowrap}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.gift{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px;min-height:158px;box-shadow:0 4px 14px #30205208}.gift .art{font-size:35px;background:#f7f3ff;width:58px;height:58px;display:grid;place-items:center;border-radius:16px;margin-bottom:10px}.gift h3{font-size:14px;margin:0 0 5px}.gift p{font-size:12px;color:var(--muted);margin:0 0 10px}.giftbottom{display:flex;align-items:center;justify-content:space-between}.tag{font-size:11px;color:var(--purple);background:#f1ebff;border-radius:20px;padding:5px 8px}.heart{border:0;background:transparent;font-size:20px;color:#a29bad;cursor:pointer}.heart.saved{color:#f05283}
-.adbox{margin:22px 0;background:#fff;border:1px dashed #cfc5e5;border-radius:15px;padding:14px;text-align:center;color:#928aa2;font-size:12px}.adbox strong{display:block;color:#6f6680;font-size:11px;margin-bottom:4px}
-.empty{display:none;text-align:center;color:var(--muted);padding:25px}.footer{text-align:center;color:#918a9e;font-size:11px;padding:18px}
-@media(min-width:650px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hero h1{font-size:36px}}
+*{box-sizing:border-box}
+body{margin:0;background:#f7f5fc;color:#252039;font-family:system-ui,"Noto Sans Bengali",sans-serif}
+header{background:linear-gradient(130deg,#5825bd,#a36bf4);color:white;padding:25px 18px 32px;border-radius:0 0 25px 25px}
+.top{display:flex;justify-content:space-between;align-items:center;max-width:950px;margin:auto}
+.logo{font-size:22px;font-weight:800}
+.tag{font-size:12px;border:1px solid #ffffff70;border-radius:20px;padding:7px 12px}
+.hero{max-width:950px;margin:28px auto 0}
+.hero h1{font-size:29px;line-height:1.5;margin:0 0 8px}
+.hero p{font-size:14px;opacity:.9}
+.wrap{max-width:950px;margin:auto;padding:18px 14px}
+.search{display:flex;background:white;border-radius:15px;padding:5px;box-shadow:0 5px 20px #25124b12;margin-top:-32px;position:relative}
+.search input{border:0;outline:0;padding:13px;width:100%;font-size:15px;background:transparent}
+.search button{background:#7138d8;color:white;border:0;border-radius:11px;padding:0 18px}
+h2{font-size:19px;margin:25px 0 13px}
+.categories{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px}
+.chip{border:1px solid #eee;background:white;padding:9px 14px;border-radius:25px;white-space:nowrap;color:#51456b}
+.chip.active{background:#7138d8;color:white;border-color:#7138d8}
+.banner{background:linear-gradient(100deg,#fff0f5,#f0e9ff);border-radius:17px;padding:17px;display:flex;align-items:center;gap:13px;margin:15px 0}
+.banner .emoji{font-size:35px}
+.banner button,.primary{background:#7138d8;color:white;border:0;padding:10px 15px;border-radius:10px;font-weight:600}
+.banner button{margin-left:auto;white-space:nowrap}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.card{background:white;border:1px solid #eee;border-radius:17px;padding:13px;box-shadow:0 4px 15px #25124b08}
+.art{height:90px;width:90px;background:#f5efff;border-radius:18px;display:grid;place-items:center;font-size:49px;margin-bottom:12px}
+.card h3{font-size:16px;margin:5px 0}
+.card p{font-size:13px;color:#777;line-height:1.6;min-height:40px;margin:5px 0 12px}
+.pill{display:inline-block;background:#f1eaff;color:#7545bd;padding:5px 10px;border-radius:20px;font-size:11px}
+.actions{display:flex;align-items:center;justify-content:space-between;margin-top:12px}
+.heart{border:0;background:white;font-size:25px;color:#999}
+.heart.saved{color:#ed4784}
+.links{display:flex;gap:7px;margin-top:10px}
+.links a{flex:1;text-align:center;text-decoration:none;font-size:11px;padding:9px 3px;border-radius:9px;background:#fff1e6;color:#9a511a}
+.links a:last-child{background:#eaf3ff;color:#245ba8}
+.empty{text-align:center;padding:30px;color:#888;grid-column:1/-1}
+.ad{margin:25px 0;background:white;border:1px dashed #cfc5dd;border-radius:16px;text-align:center;padding:22px;color:#888;font-size:13px}
+footer{text-align:center;color:#999;padding:28px 10px;font-size:12px}
+#savedSection{scroll-margin-top:15px}
+@media(min-width:650px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hero h1{font-size:37px}}
 </style>
 </head>
 <body>
 <header>
-  <div class="top"><div class="brand">🎁 Gift <span>Hub</span></div><div class="pill">উপহারের সুন্দর ঠিকানা</div></div>
-  <div class="hero"><h1>প্রিয়জনের জন্য খুঁজে নিন<br>মনের মতো উপহার</h1><p>জন্মদিন, বিবাহবার্ষিকী কিংবা বিশেষ দিন—উপহারের আইডিয়া এখন এক জায়গায়।</p></div>
+ <div class="top">
+  <div class="logo">🎁 Gift Hub</div>
+  <div class="tag">উপহারের নতুন ঠিকানা</div>
+ </div>
+ <div class="hero">
+  <h1>প্রিয়জনের জন্য খুঁজে নিন<br>মনের মতো উপহার ❤️</h1>
+  <p>জন্মদিন, বিবাহবার্ষিকী কিংবা বিশেষ দিনে উপহার দিন ভালোবাসা।</p>
+ </div>
 </header>
-<div class="searchwrap"><input id="search" class="search" type="search" placeholder="🔎 উপহার খুঁজুন… যেমন জন্মদিন, বই, ফুল"></div>
-<main>
-  <div class="sectionhead"><h2>ক্যাটাগরি</h2><span class="muted">আপনার পছন্দ বেছে নিন</span></div>
-  <div class="categories" id="categories">
-    <button class="chip active" data-cat="সব">সব</button><button class="chip" data-cat="জন্মদিন">🎂 জন্মদিন</button><button class="chip" data-cat="ভালোবাসা">💝 ভালোবাসা</button><button class="chip" data-cat="পরিবার">👨‍👩‍👧 পরিবার</button><button class="chip" data-cat="বন্ধু">🫶 বন্ধু</button><button class="chip" data-cat="কম বাজেট">💰 কম বাজেট</button>
-  </div>
-  <div class="sectionhead"><h2>আজকের বিশেষ আইডিয়া</h2></div>
-  <div class="feature"><div class="emoji">🌷</div><div><h3>ছোট্ট চমক, বড় আনন্দ</h3><p>একগুচ্ছ ফুলের সঙ্গে নিজের হাতে লেখা একটি চিঠি।</p></div><button class="btn" id="surprise">আরও আইডিয়া</button></div>
-  <div class="sectionhead"><h2>জনপ্রিয় উপহারের আইডিয়া</h2><span class="muted" id="count"></span></div>
-  <div class="grid" id="grid"></div>
-  <div class="empty" id="empty">এই খোঁজে কোনো আইডিয়া পাওয়া যায়নি। অন্য শব্দ লিখে দেখুন।</div>
-  <div class="adbox"><strong>বিজ্ঞাপনের জায়গা</strong>অ্যাপ প্রকাশ ও বিজ্ঞাপন নেটওয়ার্কের অনুমোদনের পরে এখানে বিজ্ঞাপন দেখানো যাবে।</div>
-  <div class="sectionhead"><h2>আপনার পছন্দের তালিকা</h2><span class="muted">♡ সেভ করা আইডিয়া</span></div>
-  <div id="saved" class="muted">এখনও কোনো উপহার সেভ করা হয়নি।</div>
-  <div class="footer">Gift Hub © 2026 · ভালোবাসা দিয়ে তৈরি</div>
-</main>
+
+<div class="wrap">
+ <div class="search">
+  <input id="search" placeholder="🔎 উপহার খুঁজুন... যেমন জন্মদিন, বই, ফুল">
+  <button onclick="render()">খুঁজুন</button>
+ </div>
+
+ <h2>🎯 ক্যাটাগরি</h2>
+ <div class="categories" id="categories">
+  <button class="chip active" data-cat="সব">সব</button>
+  <button class="chip" data-cat="জন্মদিন">🎂 জন্মদিন</button>
+  <button class="chip" data-cat="ভালোবাসা">💝 ভালোবাসা</button>
+  <button class="chip" data-cat="পরিবার">👨‍👩‍👧 পরিবার</button>
+  <button class="chip" data-cat="বন্ধু">🤝 বন্ধু</button>
+  <button class="chip" data-cat="কম বাজেট">💰 কম বাজেট</button>
+ </div>
+
+ <div class="banner">
+  <div class="emoji">🌷</div>
+  <div><b>ছোট উপহার, বড় আনন্দ</b><br><small>একটু ভালোবাসাই বিশেষ দিনকে সুন্দর করে।</small></div>
+  <button onclick="surprise()">আইডিয়া দিন</button>
+ </div>
+
+ <h2 id="listTitle">🌟 জনপ্রিয় উপহারের আইডিয়া</h2>
+ <div class="grid" id="grid"></div>
+
+ <div class="ad">
+  <b>📢 বিজ্ঞাপনের জায়গা</b><br>
+  বিজ্ঞাপন নেটওয়ার্কের অনুমোদনের পরে এখানে বিজ্ঞাপন দেখানো যাবে।
+ </div>
+
+ <section id="savedSection">
+  <h2>❤️ আপনার পছন্দের তালিকা</h2>
+  <div id="savedList" class="grid"></div>
+ </section>
+</div>
+
+<footer>
+ Gift Hub © 2026 | ভালোবাসা দিয়ে তৈরি ❤️<br>
+সবার জন্য সুন্দর উপহারের ঠিকানা
+</footer>
+
 <script>
-const items=[
- {id:1,e:'🎧',n:'ওয়্যারলেস ইয়ারবাড',d:'গান শুনতে ভালোবাসেন এমন কারও জন্য',c:'জন্মদিন',t:'টেক'},
- {id:2,e:'📚',n:'প্রিয় বই',d:'বইপ্রেমী মানুষকে আনন্দ দেওয়ার সহজ উপায়',c:'বন্ধু',t:'ভাবনাপূর্ণ'},
- {id:3,e:'🌹',n:'ফুলের তোড়া',d:'বিশেষ দিনে মনের কথা জানান',c:'ভালোবাসা',t:'রোমান্টিক'},
- {id:4,e:'☕',n:'কাস্টম মগ',d:'নাম বা ছবি দিয়ে ব্যক্তিগত উপহার',c:'পরিবার',t:'ব্যক্তিগত'},
- {id:5,e:'🪴',n:'ছোট ইনডোর গাছ',d:'ঘর সাজাতে ভালোবাসেন এমন কারও জন্য',c:'কম বাজেট',t:'প্রকৃতি'},
- {id:6,e:'🖼️',n:'ছবির ফ্রেম',d:'একসঙ্গে কাটানো স্মৃতি ধরে রাখুন',c:'পরিবার',t:'স্মৃতি'},
- {id:7,e:'⌚',n:'হাতঘড়ি',d:'প্রতিদিন ব্যবহার করা যায় এমন উপহার',c:'জন্মদিন',t:'স্টাইল'},
- {id:8,e:'🍫',n:'চকলেট বক্স',d:'ছোট্ট আনন্দের মিষ্টি চমক',c:'কম বাজেট',t:'মিষ্টি'},
- {id:9,e:'🧸',n:'নরম টেডি',d:'প্রিয়জনের জন্য মিষ্টি স্মারক',c:'ভালোবাসা',t:'কিউট'},
- {id:10,e:'🖊️',n:'সুন্দর কলম',d:'পড়াশোনা বা কাজের জন্য উপযোগী',c:'বন্ধু',t:'ব্যবহারিক'}
+const gifts=[
+{id:1,e:"🎧",n:"ওয়্যারলেস ইয়ারবাড",d:"গান শুনতে ভালোবাসেন এমন কারও জন্য",c:"জন্মদিন",q:"wireless earbuds"},
+{id:2,e:"📚",n:"প্রিয় বই",d:"বইপ্রেমী মানুষের জন্য সুন্দর উপহার",c:"বন্ধু",q:"best books"},
+{id:3,e:"🌹",n:"ফুলের তোড়া",d:"বিশেষ দিনে মনের কথা জানান",c:"ভালোবাসা",q:"flower bouquet"},
+{id:4,e:"☕",n:"কাস্টম মগ",d:"নাম বা ছবি দিয়ে বানানো উপহার",c:"পরিবার",q:"custom photo mug"},
+{id:5,e:"🪴",n:"ছোট ইনডোর গাছ",d:"ঘর সাজাতে ভালোবাসেন এমন কারও জন্য",c:"কম বাজেট",q:"indoor plants"},
+{id:6,e:"🖼️",n:"ফটো ফ্রেম",d:"একসঙ্গে কাটানো স্মৃতি ধরে রাখুন",c:"পরিবার",q:"photo frame"},
+{id:7,e:"⌚",n:"হাতঘড়ি",d:"প্রতিদিন ব্যবহার করা যায় এমন উপহার",c:"জন্মদিন",q:"wrist watch"},
+{id:8,e:"🍫",n:"চকলেট বক্স",d:"ছোট আনন্দের মিষ্টি চমক",c:"কম বাজেট",q:"chocolate gift box"},
+{id:9,e:"🧸",n:"নরম টেডি",d:"প্রিয়জনের জন্য মিষ্টি স্মারক",c:"ভালোবাসা",q:"teddy bear"},
+{id:10,e:"🖊️",n:"সুন্দর কলম",d:"পড়াশোনা বা কাজের জন্য উপযোগী",c:"বন্ধু",q:"stylish pen"},
+{id:11,e:"👛",n:"সুন্দর মানিব্যাগ",d:"প্রতিদিনের কাজে ব্যবহারযোগ্য",c:"জন্মদিন",q:"wallet gift"},
+{id:12,e:"🎒",n:"স্টাইলিশ ব্যাগ",d:"স্কুল, কলেজ বা ভ্রমণের জন্য",c:"বন্ধু",q:"stylish backpack"}
 ];
-let active='সব',saved=JSON.parse(localStorage.getItem('gh_saved')||'[]');
-function render(){
- const q=document.getElementById('search').value.trim().toLowerCase();
- const filtered=items.filter(x=>(active==='সব'||x.c===active)&&(x.n+' '+x.d+' '+x.c+' '+x.t).toLowerCase().includes(q));
- document.getElementById('grid').innerHTML=filtered.map(x=>`<article class="gift"><div class="art">${x.e}</div><h3>${x.n}</h3><p>${x.d}</p><div class="giftbottom"><span class="tag">${x.c}</span><button class="heart ${saved.includes(x.id)?'saved':''}" aria-label="পছন্দে রাখুন" onclick="toggleSave(${x.id})">${saved.includes(x.id)?'♥':'♡'}</button></div></article>`).join('');
- document.getElementById('count').textContent=filtered.length+'টি আইডিয়া';
- document.getElementById('empty').style.display=filtered.length?'none':'block';
- document.getElementById('saved').textContent=saved.length?items.filter(x=>saved.includes(x.id)).map(x=>x.e+' '+x.n).join('  ·  '):'এখনও কোনো উপহার সেভ করা হয়নি।';
+
+let category="সব";
+let saved=JSON.parse(localStorage.getItem("giftHubSaved")||"[]");
+
+function card(g){
+ const isSaved=saved.includes(g.id);
+ return `<article class="card">
+ <div class="art">${g.e}</div>
+ <h3>${g.n}</h3>
+ <p>${g.d}</p>
+ <span class="pill">${g.c}</span>
+ <div class="actions">
+ <button class="heart ${isSaved?"saved":""}" onclick="toggle(${g.id})">${isSaved?"♥":"♡"}</button>
+ <button class="primary" onclick="shareGift(${g.id})">শেয়ার ↗</button>
+ </div>
+ <div class="links">
+ <a target="_blank" rel="noopener" href="https://www.amazon.in/s?k=${encodeURIComponent(g.q)}">Amazon</a>
+ <a target="_blank" rel="noopener" href="https://www.flipkart.com/search?q=${encodeURIComponent(g.q)}">Flipkart</a>
+ </div>
+ </article>`;
 }
-function toggleSave(id){saved=saved.includes(id)?saved.filter(x=>x!==id):[...saved,id];localStorage.setItem('gh_saved',JSON.stringify(saved));render()}
-document.getElementById('search').addEventListener('input',render);
-document.getElementById('categories').addEventListener('click',e=>{if(e.target.matches('button[data-cat]')){active=e.target.dataset.cat;document.querySelectorAll('.chip').forEach(b=>b.classList.toggle('active',b===e.target));render()}});
-document.getElementById('surprise').addEventListener('click',()=>{const x=items[Math.floor(Math.random()*items.length)];alert('🎁 '+x.n+'\\n'+x.d)});
+
+function render(){
+ const q=document.getElementById("search").value.toLowerCase().trim();
+ const filtered=gifts.filter(g=>
+ (category==="সব"||g.c===category)&&
+ (g.n.toLowerCase().includes(q)||g.d.toLowerCase().includes(q)||g.c.toLowerCase().includes(q))
+ );
+ document.getElementById("grid").innerHTML=filtered.length?filtered.map(card).join(""):'<div class="empty">দুঃখিত! কোনো উপহার পাওয়া যায়নি। অন্য শব্দ দিয়ে খুঁজুন।</div>';
+ document.getElementById("listTitle").textContent=category==="সব"?"🌟 জনপ্রিয় উপহারের আইডিয়া":"🎁 "+category+" উপহার";
+ const list=gifts.filter(g=>saved.includes(g.id));
+ document.getElementById("savedList").innerHTML=list.length?list.map(card).join(""):'<div class="empty">এখনও কোনো উপহার সেভ করা হয়নি। ❤️ চিহ্নে চাপ দিন।</div>';
+}
+
+function toggle(id){
+ saved=saved.includes(id)?saved.filter(x=>x!==id):[...saved,id];
+ localStorage.setItem("giftHubSaved",JSON.stringify(saved));
+ render();
+}
+
+function surprise(){
+ const g=gifts[Math.floor(Math.random()*gifts.length)];
+ alert("আজকের উপহারের আইডিয়া: "+g.e+" "+g.n+"\n"+g.d);
+}
+
+function shareGift(id){
+ const g=gifts.find(x=>x.id===id);
+ const message="🎁 Gift Hub উপহারের আইডিয়া\n"+g.e+" "+g.n+"\n"+g.d+"\n"+location.href;
+ window.open("https://wa.me/?text="+encodeURIComponent(message),"_blank");
+}
+
+document.getElementById("search").addEventListener("input",render);
+document.getElementById("categories").addEventListener("click",e=>{
+ const b=e.target.closest("button[data-cat]");
+ if(!b)return;
+ category=b.dataset.cat;
+ document.querySelectorAll(".chip").forEach(x=>x.classList.toggle("active",x===b));
+ render();
+});
 render();
 </script>
 </body>
